@@ -25,8 +25,16 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="467dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="40dp">
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textPotez">
 
         <TableRow
             android:layout_width="match_parent"
@@ -35,17 +43,20 @@
             <Button
                 android:id="@+id/dugme1"
                 android:layout_width="128dp"
-                android:layout_height="128dp" />
+                android:layout_height="128dp"
+                android:onClick="onClick" />
 
             <Button
                 android:id="@+id/dugme2"
                 android:layout_width="128dp"
-                android:layout_height="128dp" />
+                android:layout_height="128dp"
+                android:onClick="onClick" />
 
             <Button
                 android:id="@+id/dugme3"
                 android:layout_width="128dp"
-                android:layout_height="128dp" />
+                android:layout_height="128dp"
+                android:onClick="onClick" />
         </TableRow>
 
         <TableRow
@@ -55,17 +66,20 @@
             <Button
                 android:id="@+id/dugme4"
                 android:layout_width="128dp"
-                android:layout_height="128dp" />
+                android:layout_height="128dp"
+                android:onClick="onClick" />
 
             <Button
                 android:id="@+id/dugme5"
                 android:layout_width="128dp"
-                android:layout_height="128dp" />
+                android:layout_height="128dp"
+                android:onClick="onClick" />
 
             <Button
                 android:id="@+id/dugme6"
                 android:layout_width="128dp"
-                android:layout_height="128dp" />
+                android:layout_height="128dp"
+                android:onClick="onClick" />
         </TableRow>
 
         <TableRow
@@ -76,17 +90,19 @@
                 android:id="@+id/dugme7"
                 android:layout_width="128dp"
                 android:layout_height="128dp"
-                android:width="dugme1" />
+                android:onClick="onClick" />
 
             <Button
                 android:id="@+id/dugme8"
                 android:layout_width="128dp"
-                android:layout_height="128dp" />
+                android:layout_height="128dp"
+                android:onClick="onClick" />
 
             <Button
                 android:id="@+id/dugme9"
                 android:layout_width="128dp"
-                android:layout_height="128dp" />
+                android:layout_height="128dp"
+                android:onClick="onClick" />
         </TableRow>
 
         <TableRow
