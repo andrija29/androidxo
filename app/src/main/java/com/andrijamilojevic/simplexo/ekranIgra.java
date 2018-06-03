@@ -21,6 +21,7 @@ public class ekranIgra extends AppCompatActivity {
 
     List<Button> listaDugmica = new ArrayList<Button>();
 
+    int brojPoteza = 0;
     int[] polja = new int[]{ 0 ,0, 0, 0, 0, 0, 0, 0, 0 };
 
     @Override
@@ -54,6 +55,7 @@ public class ekranIgra extends AppCompatActivity {
             polja[i] = 0;
             listaDugmica.get(i).setText(" ");
         }
+        brojPoteza = 0;
     }
 
     private void imamoPobednika(){
@@ -102,6 +104,28 @@ public class ekranIgra extends AppCompatActivity {
             listaDugmica.get(id).setText(igracNaPotezu == 1 ? "X" : "O");
             proveriKraj();
             promeniPotez();
+            brojPoteza++;
+            if(brojPoteza == 9){
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        context);
+                alertDialogBuilder.setTitle("Kraj Igre!");
+                alertDialogBuilder
+                        .setMessage("Rezultat je neresen!")
+                        .setCancelable(false)
+                        .setPositiveButton("Izadji",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                ekranIgra.this.finish();
+                            }
+                        })
+                        .setNegativeButton("Ponovo",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                resetujSve();
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+            }
         }
     }
 
